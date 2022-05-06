@@ -1,6 +1,6 @@
-name: 'QR Code Commenter'
+name: 'QR Code Commenter for pull requests'
 description: 'A GitHub Action that posts a QR code to a pull request comment.'
-author: 'kentaro-m'
+author: 'roshangm1'
 inputs:
   comment:
     description: 'The body for comment to post to a pull request comment. Must be contained {qrcode} placeholder and placed it to a new line.'
