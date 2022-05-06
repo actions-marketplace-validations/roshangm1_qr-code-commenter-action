@@ -5,15 +5,17 @@ import * as QRCode from 'qrcode'
 async function run(): Promise<void> {
   try {
     const content = core.getInput('content', {required: true})
-    const result = await QRCode.toString(content)
+    const result = await QRCode.toString(content, {
+      type: 'terminal'
+    })
     const comment = core.getInput('comment', {required: true})
     const body = comment.replace('{qrcode}', result)
 
     const token = core.getInput('repo-token', {required: true})
-    const githubAPI = new github.GitHub(token)
+    const githubAPI = github.getOctokit(token)
     const {repo, issue} = github.context
 
-    await githubAPI.issues.createComment({
+    await githubAPI.rest.issues.createComment({
       owner: repo.owner,
       repo: repo.repo,
       // eslint-disable-next-line @typescript-eslint/camelcase
