@@ -1,5 +1,5 @@
 {
-  "name": "qr-code-commenter-action",
+  "name": "qr-code-comment-pr",
   "version": "0.1.2",
   "description": "A GitHub Action that posts a QR code to a pull request comment.",
   "main": "lib/main.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kentaro-m/qr-code-commenter-action.git"
+    "url": "git+https://github.com/roshangm1/qr-code-commenter-action.git"
   },
   "keywords": [
     "actions",
