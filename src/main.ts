@@ -6,7 +6,7 @@ async function run(): Promise<void> {
   try {
     const content = core.getInput('content', {required: true})
     const result = await QRCode.toString(content, {
-      type: 'terminal'
+      type: 'svg'
     })
     const comment = core.getInput('comment', {required: true})
     const body = comment.replace('{qrcode}', result)
