@@ -1,5 +1,5 @@
 {
-  "name": "@roshangm1/qr-code-commenter-action",
+  "name": "qr-code-commenter-action",
   "version": "0.1.2",
   "description": "A GitHub Action that posts a QR code to a pull request comment.",
   "main": "lib/main.js",
@@ -21,7 +21,7 @@
     "node",
     "setup"
   ],
-  "author": "kentaro-m",
+  "author": "roshangm1",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "1.8.0",
